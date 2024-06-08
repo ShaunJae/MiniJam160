@@ -9,7 +9,6 @@ public class SunMovement : MonoBehaviour {
 
     void Start() {
         MiniJam.sun = transform;
-        Debug.Log(123);
         rotationDirection = Random.insideUnitCircle;
     }
     void Update() {
