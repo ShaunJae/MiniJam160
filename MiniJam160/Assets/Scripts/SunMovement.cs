@@ -1,22 +1,26 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SunMovement : MonoBehaviour {
 
-    Vector2 rotationPosition = Vector2.right * 90;
-    Vector2 rotationDirection = Vector2.zero;
-
     void Start() {
         MiniJam.sun = transform;
-        rotationDirection = Random.insideUnitCircle;
+        RotateSun();
     }
     void Update() {
-        RotateSun();
+
     }
 
     void RotateSun() {
-        rotationPosition += rotationDirection;
-        transform.rotation = Quaternion.Euler(rotationPosition.x, rotationPosition.y, 0);
+        transform.DORotate(SelectPosition(), Random.Range(2, 4)).SetEase(Ease.Linear).onComplete = RotateSun;
+    }
+    Vector3 SelectPosition() {
+        return new Vector3(
+            Random.Range(25, 155),
+            Random.Range(0, 360),
+            0
+        );
     }
 }

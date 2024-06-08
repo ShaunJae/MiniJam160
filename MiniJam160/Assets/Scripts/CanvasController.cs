@@ -7,6 +7,8 @@ public class CanvasController : MonoBehaviour {
     private RectTransform lightBar;
 
     void Start() {
+        Application.targetFrameRate = 165;
+
         MiniJam.canvasController = this;
         lightBar = (RectTransform)transform.Find("BG/LightBar");
     }
