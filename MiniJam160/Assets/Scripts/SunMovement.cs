@@ -13,6 +13,7 @@ public class SunMovement : MonoBehaviour {
     }
     void Update() {
         RotateSun();
+        Debug.Log("poop");
     }
 
     void RotateSun() {
