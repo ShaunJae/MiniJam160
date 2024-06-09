@@ -15,9 +15,9 @@ public class ModuleTile : MonoBehaviour {
         }
 
         geometryContainer = transform.Find("Geometry").gameObject;
-        geometryContainer.SetActive(false);
+        //geometryContainer.SetActive(false);
 
-        Invoke("DestroySelf", 5f);
+        //Invoke("DestroySelf", 5f);
     }
 
     void DestroySelf() {
