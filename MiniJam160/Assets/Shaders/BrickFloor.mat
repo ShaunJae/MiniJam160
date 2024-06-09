@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BrickFloor
-  m_Shader: {fileID: -6465566751694194690, guid: 19bfc5e86bb8dbb408994d04cdd9e5fd, type: 3}
-  m_Parent: {fileID: -876546973899608171, guid: 19bfc5e86bb8dbb408994d04cdd9e5fd, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: eb74747e993315a43b253ec5d623099c, type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: eb74747e993315a43b253ec5d623099c, type: 3}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -36,12 +36,27 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: db5eea8e3568ba7408351a3d8a75bf86, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: db5eea8e3568ba7408351a3d8a75bf86, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 69691f733e351504ab0ce5bc427ba840, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2D:
         m_Texture: {fileID: 2800000, guid: a145ac26cdb16ee448431abcd14fd7e8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _Blend: 1
     - _Float: 0.25
+    - _Scale: 0.25
     m_Colors: []
   m_BuildTextureStacks: []

@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour {
     public int jumpCount = 2;
     public float moveSpeed = 7.5f;
 
+    public bool speedPowerup = false;
+    public bool tripleJump = false;
+
     void Start() {
 
         rb = GetComponent<Rigidbody>();
@@ -26,6 +29,19 @@ public class PlayerMovement : MonoBehaviour {
 
         Move();
         Jump();
+
+        if (speedPowerup)
+        {
+            speedPowerup = false;
+            moveSpeed = moveSpeed * 1.5f;
+            StartCoroutine(SpeedPowerupTimer());
+        }
+        if (tripleJump)
+        {
+            tripleJump = false;
+            jumpCount = 3;
+            StartCoroutine(JumpPowerupTimer());
+        }
 
     }
 
@@ -60,5 +76,16 @@ public class PlayerMovement : MonoBehaviour {
         if(Vector2.Angle(Vector3.up, collision.GetContact(0).normal) < 35) {
             jumpsAvailable = jumpCount;
         }
+    }
+    IEnumerator SpeedPowerupTimer()
+    {
+        yield return new WaitForSeconds(15);
+        moveSpeed = moveSpeed / 1.5f;
+
+    }
+    IEnumerator JumpPowerupTimer()
+    {
+        yield return new WaitForSeconds(15);
+        jumpCount = 2;
     }
 }

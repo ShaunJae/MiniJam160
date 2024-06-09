@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class bounceMask : MonoBehaviour
 {
+    [SerializeField] float rotateSpeed;
     float startingHeight;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class bounceMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0f, 1f, 0f);
+        transform.Rotate(0f, (60f * rotateSpeed * Time.deltaTime), 0f);
 
         Vector3 newPos = transform.position;
         newPos.y = startingHeight + Mathf.Sin(Time.time * 3) * 0.25f;
