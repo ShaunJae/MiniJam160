@@ -37,7 +37,7 @@ public class PlayerDamage : MonoBehaviour {
                 return;
             }
         }
-        if (Physics.Raycast(footLocation.position, MiniJam.sun.forward * -1, out hit, Mathf.Infinity)) {
+        if (Physics.Raycast(footLocation.position, MiniJam.sun.forward * -1, out hit, Mathf.Infinity, 1 << 0)) {
             MiniJam.ChangeHealth(-0.01f);
             return;
         }
